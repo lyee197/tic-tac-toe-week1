@@ -5,9 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="header">
+        <h1 class="title">Tic Tac Toe</h1>
+        <p class="rules">Welcome to tic tac toe! The basics of the game is whomever gets three of their x's or o's to line up wins the game!</p>  
+    </div>
+    <!-- <div id="player-select">
+        <p>Choose your Piece</p>
+        <button id="x">X</button>
+        <button id="o">O</button>
+    </div> -->
+    <!-- holds information on game -->
+    <div class="scoreboard">
+        <!-- start button will start game -->
+        <button id="start">Start game!</button>
+        <button id="restart">Restart game!</button>
+        <h2 class="winner"></h2>
+        <h2 class="turn"></h2>
+    </div>
+    <!-- game holds the game -->
+    <div class="game">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+        <div id="box5" class="box"></div>
+        <div id="box6" class="box"></div>
+        <div id="box7" class="box"></div>
+        <div id="box8" class="box"></div>
+        <div id="box9" class="box"></div>
+    </div>
+    <script src="js/app.js"></script>
 </body>
 </html>

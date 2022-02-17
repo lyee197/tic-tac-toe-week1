@@ -17,43 +17,151 @@ const start = document.querySelector('#start')
 const restart = document.querySelector('#restart')
 const gameBoard = document.querySelector('.game')
 const scoreboard = document.querySelector('.scoreboard')
-// const letterX = document.querySelector('#x')
-// const letterO = document.querySelector('#o')
+const letterX = document.querySelector('#x')
+const letterO = document.querySelector('#o')
 const box = document.querySelector('.box')
+const winner = document.querySelector('#winner')
+const turn = document.querySelector('#turn')
 
-const playerSelection = (letterX, letterO) => {
+//test
 
+let player = 'X'
+
+// const outcome = () => {
+//     if ()
+// }
+
+
+const playerSelection = () => {
+    outcome()
+    if (player === 'O') {
+        player = "X"
+        turn.innerText = "X's Turn!"
+    } else {
+        player = "O"
+        turn.innerText = "O's Turn!"
+    }
 }
 
-//places x or o in box
-function place() {
-    boxA.appendChild('X')
-    console.log('pressA')
+// places x or o in box
+const placeA = () => {
+    // boxA.appendChild('X')
+    if (boxA.innerText === "") {
+        console.log('pressA')
+        boxA.innerText = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
 }
-// let x = box.addinnerText('x')
+const placeB = () => {
+    // boxB.appendChild('X')
+    if (boxB.innerText === "") {
+        console.log('pressB')
+        boxB.innerText = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
+}
+const placeC = () => {
+    // boxC.appendChild('X')
+    if (boxC.innerText === "") {
+        console.log('pressC')
+        boxC.innerText = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
+const placeD = () => {
+    // boxD.appendChild('X')
+    if (boxD.innerText === "") {
+        console.log('pressC')
+        boxD.innerText = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
+const placeE = () => {
+    // boxE.appendChild('X')
+    if (boxE.innerText === "") {
+        console.log('pressC')
+        boxE.innerTeFt = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
+const placeF = () => {
+    // boxF.appendChild('X')
+    if (boxF.innerText === "") {
+        console.log('pressC')
+        boxF.innerText = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
+const placeG = () => {
+    // boxG.appendChild('X')
+    if (boxG.innerText === "") {
+        console.log('pressC')
+        boxG.innerText = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
+const placeH = () => {
+    // boxH.appendChild('X')
+    if (boxH.innerText === "") {
+        console.log('pressC')
+        boxH.innerText = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
+const placeI = () => {
+    // boxI.appendChild('X')
+    if (boxI.innerText === "") {
+        console.log('pressC')
+        boxI.innerText = player
+        playerSelection()
+        console.log(player)
+    }   else {
+        console.log('This box is full')
+    }
+}
+
+
 
 // what needs to be correct in order to see who wins
 // whichever button is pressed first is p1, else p2
-const letterX = () => {
-    if (boxA === "") {
-        console.log('yes')
+// const letterX = () => {
+//     if (boxA === "") {
+//         console.log('yes')
 
-    }
-    const wow = document.createElement('div')
-    wow.appendChild('X')
-    console.log('Inserted A')
+//     }
+//     const wow = document.createElement('div')
+//     wow.appendChild('X')
+//     console.log('Inserted A')
     
-}
-document.addEventListener('domContentLoaded', () => {
-    let pressA = boxA.addEventListener('click', letterX)
-    let pressB = boxB.addEventListener('click', letterX)
-    let pressC = boxC.addEventListener('click', letterX)
-    let pressD = boxD.addEventListener('click', letterX)
-    let pressE = boxE.addEventListener('click', letterX)
-    let pressF = boxF.addEventListener('click', letterX)
-    let pressG = boxG.addEventListener('click', letterX)
-    let pressH = boxH.addEventListener('click', letterX)
-    let pressI = boxI.addEventListener('click', letterX)
+//}
+document.addEventListener('DOMContentLoaded', () => {
+    let pressA = boxA.addEventListener('click', placeA)
+    let pressB = boxB.addEventListener('click', placeB)
+    let pressC = boxC.addEventListener('click', placeC)
+    let pressD = boxD.addEventListener('click', placeD)
+    let pressE = boxE.addEventListener('click', placeE)
+    let pressF = boxF.addEventListener('click', placeF)
+    let pressG = boxG.addEventListener('click', placeG)
+    let pressH = boxH.addEventListener('click', placeH)
+    let pressI = boxI.addEventListener('click', placeI)
 })
 
 
@@ -94,3 +202,19 @@ document.addEventListener('domContentLoaded', () => {
 //     gameBoard.innerText = 'New Game Created'
 //     console.log('clear')
 // }
+
+
+
+
+// const player1 = 'X'
+// const player2 = 'O'
+// const board = ['','','','','','','','','']
+// const game = 
+
+
+// const box = document.querySelector('.game')
+// console.log(box)
+// for (let i = 0; i < box.children.length; i++)
+//     console.log(box.children[i].id)
+//     if (box.children )
+// document.querySelectorAll('.box').addEventListener('click',  )

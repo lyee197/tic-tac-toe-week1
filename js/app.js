@@ -27,10 +27,31 @@ const turn = document.querySelector('#turn')
 
 let player = 'X'
 
-// const outcome = () => {
-//     if ()
-// }
+const outcome = () => {
+    console.log('this is box A inner text', boxA.innerText)
+    console.log('this is box B inner text', boxB.innerText)
+    if (boxA.innerText === player && boxB.innerText === player && boxC.innerText === player ){
+        winner.innerText = `${player} has been declared victorious! ^-^`
+    } else if (boxD.innerText === player && boxE.innerText === player && boxF.innerText === player) {
+        winner.innerText = `${player} has been declared victorious! ^-^`
+    } else if (boxG.innerText === player && boxH.innerText === player && boxI.innerText === player) {
+        winner.innerText = `${player} has been declared victorious! ^-^`
+    } else if (boxA.innerText === player && boxD.innerText === player && boxG.innerText === player) {
+        winner.innerText = `${player} has been declared victorious! ^-^`
+    } else if (boxB.innerText === player && boxE.innerText === player && boxH.innerText === player) {
+        winner.innerText = `${player} has been declared victorious! ^-^`
+    } else if (boxC.innerText === player && boxF.innerText === player && boxI.innerText === player) {
+        winner.innerText = `${player} has been declared victorious! ^-^`
+    } else if (boxA.innerText === player && boxE.innerText === player && boxI.innerText === player) {
+        winner.innerText = `${player} has been declared victorious! ^-^`
+    } else if (boxC.innerText === player && boxE.innerText === player && boxG.innerText === player) {
+        winner.innerText = `${player} has been declared victorious! ^-^`
+    } else if (boxA === '' && boxB === '' && boxC === '' && boxD === '' && boxE === '' && boxF === '' && boxG === '' &&  boxH === '' && boxI === '')  {
+        winner.innerText = 'There is no winner! Try again!'
+    } else return
+}
 
+// if (boxA.innerText === player && boxB.innerText === player && boxC.innerText === player )
 
 const playerSelection = () => {
     outcome()
@@ -50,7 +71,6 @@ const placeA = () => {
         console.log('pressA')
         boxA.innerText = player
         playerSelection()
-        console.log(player)
     }   else {
         console.log('This box is full')
     }
@@ -61,7 +81,6 @@ const placeB = () => {
         console.log('pressB')
         boxB.innerText = player
         playerSelection()
-        console.log(player)
     }   else {
         console.log('This box is full')
     }
@@ -72,86 +91,76 @@ const placeC = () => {
         console.log('pressC')
         boxC.innerText = player
         playerSelection()
-        console.log(player)
-    }   else {
-        console.log('This box is full')
-    }
-const placeD = () => {
-    // boxD.appendChild('X')
-    if (boxD.innerText === "") {
-        console.log('pressC')
-        boxD.innerText = player
-        playerSelection()
-        console.log(player)
-    }   else {
-        console.log('This box is full')
-    }
-const placeE = () => {
-    // boxE.appendChild('X')
-    if (boxE.innerText === "") {
-        console.log('pressC')
-        boxE.innerTeFt = player
-        playerSelection()
-        console.log(player)
-    }   else {
-        console.log('This box is full')
-    }
-const placeF = () => {
-    // boxF.appendChild('X')
-    if (boxF.innerText === "") {
-        console.log('pressC')
-        boxF.innerText = player
-        playerSelection()
-        console.log(player)
-    }   else {
-        console.log('This box is full')
-    }
-const placeG = () => {
-    // boxG.appendChild('X')
-    if (boxG.innerText === "") {
-        console.log('pressC')
-        boxG.innerText = player
-        playerSelection()
-        console.log(player)
-    }   else {
-        console.log('This box is full')
-    }
-const placeH = () => {
-    // boxH.appendChild('X')
-    if (boxH.innerText === "") {
-        console.log('pressC')
-        boxH.innerText = player
-        playerSelection()
-        console.log(player)
-    }   else {
-        console.log('This box is full')
-    }
-const placeI = () => {
-    // boxI.appendChild('X')
-    if (boxI.innerText === "") {
-        console.log('pressC')
-        boxI.innerText = player
-        playerSelection()
-        console.log(player)
     }   else {
         console.log('This box is full')
     }
 }
+const placeD = () => {
+    // boxD.appendChild('X')
+    if (boxD.innerText === "") {
+        console.log('pressD')
+        boxD.innerText = player
+        playerSelection()
+    }   else {
+        console.log('This box is full')
+    }
+}
+const placeE = () => {
+    // boxE.appendChild('X')
+    if (boxE.innerText === "") {
+        console.log('pressE')
+        boxE.innerText = player
+        playerSelection()
+    }   else {
+        console.log('This box is full')
+    }
+}
+const placeF = () => {
+    // boxF.appendChild('X')
+    if (boxF.innerText === "") {
+        console.log('pressF')
+        boxF.innerText = player
+        playerSelection()
+    }   else {
+        console.log('This box is full')
+    }
+}
+const placeG = () => {
+    // boxG.appendChild('X')
+    if (boxG.innerText === "") {
+        console.log('pressG')
+        boxG.innerText = player
+        playerSelection()
 
+    }   else {
+        console.log('This box is full')
+    }
+}
+const placeH = () => {
+    // boxH.appendChild('X')
+    if (boxH.innerText === "") {
+        console.log('pressH')
+        boxH.innerText = player
+        playerSelection()
+    }   else {
+        console.log('This box is full')
+    }
+}
+const placeI = () => {
+    // boxI.appendChild('X')
+    if (boxI.innerText === "") {
+        console.log('pressI')
+        boxI.innerText = player
+        playerSelection()
+    }   else {
+        console.log('This box is full')
+    }
+}
+const clearGame = () => {
+    window.location.reload();
 
+}
 
-// what needs to be correct in order to see who wins
-// whichever button is pressed first is p1, else p2
-// const letterX = () => {
-//     if (boxA === "") {
-//         console.log('yes')
-
-//     }
-//     const wow = document.createElement('div')
-//     wow.appendChild('X')
-//     console.log('Inserted A')
-    
-//}
 document.addEventListener('DOMContentLoaded', () => {
     let pressA = boxA.addEventListener('click', placeA)
     let pressB = boxB.addEventListener('click', placeB)
@@ -162,59 +171,5 @@ document.addEventListener('DOMContentLoaded', () => {
     let pressG = boxG.addEventListener('click', placeG)
     let pressH = boxH.addEventListener('click', placeH)
     let pressI = boxI.addEventListener('click', placeI)
+    let reset = restart.addEventListener('click', clearGame)
 })
-
-
-
-
-//const sayName = (name) => {
-//	console.log('Hello! My name is ' + name);
-//}
-//sayName("Frodo")
-
-
-
-// const turn = () => {
-//      for (let x = 0; x < 9; x++) {
-//      if (p % 2 === 0) {
-//      
-//}
-//}
-    
-// }
-// for if a person makes a move
-// const move = () => {
-//     box.addEventListener('click', turn )
-//     // make player 1 turn
-//     if ( === 2 % 0) {
-//         box.innerText =`O`
-//     } else {
-//         box.innerText =`X`
-//     }
-// }
-
-// const newGame = () => {
-//     while (gameBoard.firstChild)
-//         // if there are any selected squares, will clear
-//         gameBoard.removeChild(gameBoard.firstChild)
-//         letterX.addEventListener('click', x)
-//         console.log('clear')
-//     gameBoard.innerText = 'New Game Created'
-//     console.log('clear')
-// }
-
-
-
-
-// const player1 = 'X'
-// const player2 = 'O'
-// const board = ['','','','','','','','','']
-// const game = 
-
-
-// const box = document.querySelector('.game')
-// console.log(box)
-// for (let i = 0; i < box.children.length; i++)
-//     console.log(box.children[i].id)
-//     if (box.children )
-// document.querySelectorAll('.box').addEventListener('click',  )

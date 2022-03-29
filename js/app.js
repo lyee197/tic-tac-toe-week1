@@ -26,32 +26,58 @@ const turn = document.querySelector('#turn')
 //test
 
 let player = 'X'
+turn.innerText = `${player}'s Turn!`
 
 const outcome = () => {
     console.log('this is box A inner text', boxA.innerText)
     console.log('this is box B inner text', boxB.innerText)
     if (boxA.innerText === player && boxB.innerText === player && boxC.innerText === player ){
         winner.innerText = `${player} has been declared victorious! ^-^`
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
     } else if (boxD.innerText === player && boxE.innerText === player && boxF.innerText === player) {
         winner.innerText = `${player} has been declared victorious! ^-^`
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
     } else if (boxG.innerText === player && boxH.innerText === player && boxI.innerText === player) {
         winner.innerText = `${player} has been declared victorious! ^-^`
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
     } else if (boxA.innerText === player && boxD.innerText === player && boxG.innerText === player) {
         winner.innerText = `${player} has been declared victorious! ^-^`
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
     } else if (boxB.innerText === player && boxE.innerText === player && boxH.innerText === player) {
         winner.innerText = `${player} has been declared victorious! ^-^`
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
     } else if (boxC.innerText === player && boxF.innerText === player && boxI.innerText === player) {
         winner.innerText = `${player} has been declared victorious! ^-^`
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
     } else if (boxA.innerText === player && boxE.innerText === player && boxI.innerText === player) {
         winner.innerText = `${player} has been declared victorious! ^-^`
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
     } else if (boxC.innerText === player && boxE.innerText === player && boxG.innerText === player) {
         winner.innerText = `${player} has been declared victorious! ^-^`
-    } else if (boxA === '' && boxB === '' && boxC === '' && boxD === '' && boxE === '' && boxF === '' && boxG === '' &&  boxH === '' && boxI === '')  {
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
+    } else if (boxA.innerText !== '' && boxB.innerText !== '' && boxC.innerText !== '' && boxD.innerText !== '' && boxE.innerText !== '' && boxF.innerText !== '' && boxG.innerText !== '' &&  boxH.innerText !== '' && boxI.innerText !== '')  {
         winner.innerText = 'There is no winner! Try again!'
+        turn.style.visibility = 'hidden'
+        restart.style.visibility = 'visible'
+        stopGame()
     } else return
 }
-
-// if (boxA.innerText === player && boxB.innerText === player && boxC.innerText === player )
 
 const playerSelection = () => {
     outcome()
@@ -154,11 +180,12 @@ const placeI = () => {
         playerSelection()
     }   else {
         console.log('This box is full')
+        turn.innerText = 'This box is full'
     }
 }
 const clearGame = () => {
     window.location.reload();
-
+    restart.style.visibility = 'hidden' 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -173,3 +200,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let pressI = boxI.addEventListener('click', placeI)
     let reset = restart.addEventListener('click', clearGame)
 })
+
+let stopGame = () => {
+    let noA = boxA.removeEventListener('click', placeA)
+    let noB = boxB.removeEventListener('click', placeB)
+    let noC = boxC.removeEventListener('click', placeC)
+    let noD = boxD.removeEventListener('click', placeD)
+    let noE = boxE.removeEventListener('click', placeE)
+    let noF = boxF.removeEventListener('click', placeF)
+    let noG = boxG.removeEventListener('click', placeG)
+    let noH = boxH.removeEventListener('click', placeH)
+    let noI = boxI.removeEventListener('click', placeI)
+}

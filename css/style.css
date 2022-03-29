@@ -63,3 +63,7 @@ body {
     margin: 15px;
     font-size: 200px;
 }
+
+#restart {
+    visibility: hidden;
+}
